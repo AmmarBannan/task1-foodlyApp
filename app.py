@@ -24,8 +24,7 @@ def home():
     try:
         with open("logs/app.log", "r") as f:
             for line in f:
-                # Split into parts by spaces
-                parts = line.split(" ", 2)  # split max 2 times
+                parts = line.split(" ", 2) 
                 if len(parts) >= 2:
                     datetime_str = parts[0] + " " + parts[1]
                     result += f"<br>{datetime_str}"
@@ -38,3 +37,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+docker.yml0
